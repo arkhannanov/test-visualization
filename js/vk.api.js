@@ -409,6 +409,8 @@ var vk = {
                 msgData.chat_ids = [];
                 msgData.len = [];
 
+                console.log(resp);
+
                 for(var i = 0; i < resp.length; i++) {
                     if(resp[i].from_id > 0 && resp[i].peer_id < 2000000000) {
                         var msgLen = resp[i].text.length;

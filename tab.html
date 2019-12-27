@@ -25,7 +25,7 @@
     	<script src="js/table-top.js" type="text/javascript"></script>
     	<script src="js/export-module.js" type="text/javascript"></script>
     	<script src="js/animation-webgl.js" type="text/javascript"></script>
-    	<script src="js/animation-canvas.js" type="text/javascript"></script>
+<!--    	<script src="js/animation-canvas.js" type="text/javascript"></script>-->
     	<script src="js/canvas-top.js" type="text/javascript"></script>
     	<script src="js/vk.api.js" type="text/javascript"></script>
     	<script src="js/ui.js" type="text/javascript"></script>
@@ -194,253 +194,253 @@
 
 		</div>
 
-		<div id="statistic-page" style="display: none">
+<!--		<div id="statistic-page" style="display: none">-->
 
-			<div class="left-panel">
-				<!-- <div class="left-panel-header">
-					<img class="left-panel-icon" src="icons/icon48.png"></img>
-					<div class="left-panel-descr">
-						Статистика<br>
-						сообщений
-					</div>
-				</div> -->
-				<div id="button-table" class="left-panel-button selected">Таблица</div>
-				<div id="button-diagram" class="left-panel-button">Диаграмма</div>
-				<div id="button-plot" class="left-panel-button">График</div>
-				<!-- <div id="button-plot" class="left-panel-button">Экспорт</div>
-				<div id="button-plot" class="left-panel-button">Интересная статистика</div> -->
-			</div>
+<!--			<div class="left-panel">-->
+<!--				&lt;!&ndash; <div class="left-panel-header">-->
+<!--					<img class="left-panel-icon" src="icons/icon48.png"></img>-->
+<!--					<div class="left-panel-descr">-->
+<!--						Статистика<br>-->
+<!--						сообщений-->
+<!--					</div>-->
+<!--				</div> &ndash;&gt;-->
+<!--				<div id="button-table" class="left-panel-button selected">Таблица</div>-->
+<!--				<div id="button-diagram" class="left-panel-button">Диаграмма</div>-->
+<!--				<div id="button-plot" class="left-panel-button">График</div>-->
+<!--				&lt;!&ndash; <div id="button-plot" class="left-panel-button">Экспорт</div>-->
+<!--				<div id="button-plot" class="left-panel-button">Интересная статистика</div> &ndash;&gt;-->
+<!--			</div>-->
 
-			<div class="wrap">
-				<div class="wrap-shift">
+<!--			<div class="wrap">-->
+<!--				<div class="wrap-shift">-->
 
-					<div id="table-wrap">
-						<div class="chart-header">
-							Количество сообщений
-						</div>
+<!--					<div id="table-wrap">-->
+<!--						<div class="chart-header">-->
+<!--							Количество сообщений-->
+<!--						</div>-->
 
-						<div class="chart-block">
-							<div class="chart-buttons">
-								<div id="table-b-top-msg" class="chart-button selected">По числу сообщений</div>
-								<div id="table-b-top-letters" class="chart-button">По числу символов</div>
-							</div>
-							<div id="table-buttons-2" class="chart-buttons">
-								<div id="table-b-period-all" class="chart-button selected">Все время</div>
-								<div id="table-b-year" class="chart-button">Год</div>
-								<div id="table-b-month" class="chart-button">Месяц</div>
-								<div id="table-b-week" class="chart-button">Неделя</div>
-								<div id="table-b-yesterday" class="chart-button">Вчера</div>
-								<div id="table-b-today" class="chart-button">Сегодня</div>
-								<div id="table-b-period-sel" class="chart-button">Выбрать период</div>
-								<div id="table-period-sel-container" class="chart-select-period" style="display:none">
-									<label for="table-date-from">от:</label>
-									<input class="date-input" type="text" id="table-date-from" name="from">
-									<label for="table-date-to">до:</label>
-									<input class="date-input" type="text" id="table-date-to" name="to">
-								</div>
-							</div>
+<!--						<div class="chart-block">-->
+<!--							<div class="chart-buttons">-->
+<!--								<div id="table-b-top-msg" class="chart-button selected">По числу сообщений</div>-->
+<!--								<div id="table-b-top-letters" class="chart-button">По числу символов</div>-->
+<!--							</div>-->
+<!--							<div id="table-buttons-2" class="chart-buttons">-->
+<!--								<div id="table-b-period-all" class="chart-button selected">Все время</div>-->
+<!--								<div id="table-b-year" class="chart-button">Год</div>-->
+<!--								<div id="table-b-month" class="chart-button">Месяц</div>-->
+<!--								<div id="table-b-week" class="chart-button">Неделя</div>-->
+<!--								<div id="table-b-yesterday" class="chart-button">Вчера</div>-->
+<!--								<div id="table-b-today" class="chart-button">Сегодня</div>-->
+<!--								<div id="table-b-period-sel" class="chart-button">Выбрать период</div>-->
+<!--								<div id="table-period-sel-container" class="chart-select-period" style="display:none">-->
+<!--									<label for="table-date-from">от:</label>-->
+<!--									<input class="date-input" type="text" id="table-date-from" name="from">-->
+<!--									<label for="table-date-to">до:</label>-->
+<!--									<input class="date-input" type="text" id="table-date-to" name="to">-->
+<!--								</div>-->
+<!--							</div>-->
 
-							<div id="table-spinner" class="spinner">
-								<div class="bounce1"></div>
-								<div class="bounce2"></div>
-								<div class="bounce3"></div>
-							</div>
+<!--							<div id="table-spinner" class="spinner">-->
+<!--								<div class="bounce1"></div>-->
+<!--								<div class="bounce2"></div>-->
+<!--								<div class="bounce3"></div>-->
+<!--							</div>-->
 
-							<table id="table-top" class="table-top">
-								<thead>
-									<tr>
-										<th class="row-num">#</th>
-										<th class="row-user">Пользователь</th>
-										<th id="table-msg-label" class="row-msg">Всего <span class="counting-type">сообщений</span></th>
-										<th id="table-msg-out-label" class="row-msg-in">Отправлено <span class="counting-type">сообщений</span></th>
-										<th id="table-msg-in-label" class="row-msg-out">Получено <span class="counting-type">сообщений</span></th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
+<!--							<table id="table-top" class="table-top">-->
+<!--								<thead>-->
+<!--									<tr>-->
+<!--										<th class="row-num">#</th>-->
+<!--										<th class="row-user">Пользователь</th>-->
+<!--										<th id="table-msg-label" class="row-msg">Всего <span class="counting-type">сообщений</span></th>-->
+<!--										<th id="table-msg-out-label" class="row-msg-in">Отправлено <span class="counting-type">сообщений</span></th>-->
+<!--										<th id="table-msg-in-label" class="row-msg-out">Получено <span class="counting-type">сообщений</span></th>-->
+<!--									</tr>-->
+<!--								</thead>-->
+<!--								<tbody>-->
+<!--								</tbody>-->
+<!--							</table>-->
 
-						</div>
+<!--						</div>-->
 
-					</div>
+<!--					</div>-->
 
-					<div id="top-chart-wrap" style="display: none">
-						<div class="chart-header">
-							Диаграмма
-						</div>
+<!--					<div id="top-chart-wrap" style="display: none">-->
+<!--						<div class="chart-header">-->
+<!--							Диаграмма-->
+<!--						</div>-->
 
-						<div class="chart-block">
-							<div class="chart-buttons">
-								<div id="chart-b-top-msg" class="chart-button selected">По числу сообщений</div>
-								<div id="chart-b-top-letters" class="chart-button">По числу символов</div>
-							</div>
-							<div id="chart-buttons-2" class="chart-buttons">
-								<div id="chart-b-period-all" class="chart-button">Все время</div>
-								<div id="chart-b-year" class="chart-button">Год</div>
-								<div id="chart-b-month" class="chart-button">Месяц</div>
-								<div id="chart-b-week" class="chart-button">Неделя</div>
-								<div id="chart-b-yesterday" class="chart-button">Вчера</div>
-								<div id="chart-b-today" class="chart-button selected">Сегодня</div>
-								<div id="chart-b-period-sel" class="chart-button">Выбрать период</div>
-								<div id="chart-period-sel-container" class="chart-select-period" style="display:none">
-									<label for="chart-date-from">от:</label>
-									<input class="date-input" type="text" id="chart-date-from" name="from">
-									<label for="chart-date-to">до:</label>
-									<input class="date-input" type="text" id="chart-date-to" name="to">
-								</div>
-							</div>
-							<div id="canvas-top-container">
-								<canvas id="canvas-top"></canvas>
-								<div id="chart-top-tip" style="display: none">
-								</div>
-							</div>
-						</div>
+<!--						<div class="chart-block">-->
+<!--							<div class="chart-buttons">-->
+<!--								<div id="chart-b-top-msg" class="chart-button selected">По числу сообщений</div>-->
+<!--								<div id="chart-b-top-letters" class="chart-button">По числу символов</div>-->
+<!--							</div>-->
+<!--							<div id="chart-buttons-2" class="chart-buttons">-->
+<!--								<div id="chart-b-period-all" class="chart-button">Все время</div>-->
+<!--								<div id="chart-b-year" class="chart-button">Год</div>-->
+<!--								<div id="chart-b-month" class="chart-button">Месяц</div>-->
+<!--								<div id="chart-b-week" class="chart-button">Неделя</div>-->
+<!--								<div id="chart-b-yesterday" class="chart-button">Вчера</div>-->
+<!--								<div id="chart-b-today" class="chart-button selected">Сегодня</div>-->
+<!--								<div id="chart-b-period-sel" class="chart-button">Выбрать период</div>-->
+<!--								<div id="chart-period-sel-container" class="chart-select-period" style="display:none">-->
+<!--									<label for="chart-date-from">от:</label>-->
+<!--									<input class="date-input" type="text" id="chart-date-from" name="from">-->
+<!--									<label for="chart-date-to">до:</label>-->
+<!--									<input class="date-input" type="text" id="chart-date-to" name="to">-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<div id="canvas-top-container">-->
+<!--								<canvas id="canvas-top"></canvas>-->
+<!--								<div id="chart-top-tip" style="display: none">-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
 
-						<div id="chart-detail-info">
-							<section>
-								<div class="pieID pie-header">
-									<a id="pie-contact-pic" target="_blank" href="http://vk.com/"></a>
-									<ul class="pie-header-info">
-										<li>
-											<div id="pie-header-person"></div>
-										</li>
-										<li>
-											<em id="pie-msg-type"></em><em>&nbsp;за</em>
-											<em id="pie-period-name"></em>
-											<span id="pie-period-value"></span>
-										</li>
-									</ul>
-								</div>
-								<div class="pieID pie">
-									<div class="slice" id="slice-master">
-										<span></span>
-									</div>
-									<div class="slice" id="slice-slave">
-										<span></span>
-									</div>
-								</div>
-								<ui class="pieID legend">
-									<li class="legend-outcoming">
-										<em>Исходящие</em>
-										<span id="pie-legend-out-value"></span>
-									</li>
-									<li class="legend-incoming">
-										<em>Входящие</em>
-										<span id="pie-legend-in-value"></span>
-									</li>
-								</ui>
-							</section>
-						</div>
-					</div>
+<!--						<div id="chart-detail-info">-->
+<!--							<section>-->
+<!--								<div class="pieID pie-header">-->
+<!--									<a id="pie-contact-pic" target="_blank" href="http://vk.com/"></a>-->
+<!--									<ul class="pie-header-info">-->
+<!--										<li>-->
+<!--											<div id="pie-header-person"></div>-->
+<!--										</li>-->
+<!--										<li>-->
+<!--											<em id="pie-msg-type"></em><em>&nbsp;за</em>-->
+<!--											<em id="pie-period-name"></em>-->
+<!--											<span id="pie-period-value"></span>-->
+<!--										</li>-->
+<!--									</ul>-->
+<!--								</div>-->
+<!--								<div class="pieID pie">-->
+<!--									<div class="slice" id="slice-master">-->
+<!--										<span></span>-->
+<!--									</div>-->
+<!--									<div class="slice" id="slice-slave">-->
+<!--										<span></span>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<ui class="pieID legend">-->
+<!--									<li class="legend-outcoming">-->
+<!--										<em>Исходящие</em>-->
+<!--										<span id="pie-legend-out-value"></span>-->
+<!--									</li>-->
+<!--									<li class="legend-incoming">-->
+<!--										<em>Входящие</em>-->
+<!--										<span id="pie-legend-in-value"></span>-->
+<!--									</li>-->
+<!--								</ui>-->
+<!--							</section>-->
+<!--						</div>-->
+<!--					</div>-->
 
-					<div id="chart-wrap" style="display: none">
-						<div class="chart-header">
-							Статистика
-						</div>
-						<div class="chart-block">
-							<div class="chart-buttons">
-								<div id="chart-b-stat-msg" class="chart-button selected">По числу сообщений</div>
-								<div id="chart-b-stat-letters" class="chart-button">По числу символов</div>
-							</div>
-							<div class="chart-buttons">
-								<div id="chart-b-in" class="chart-button">Входящие</div>
-								<div id="chart-b-out" class="chart-button">Исходящие</div>
-								<div id="chart-b-all" class="chart-button selected">Все</div>
+<!--					<div id="chart-wrap" style="display: none">-->
+<!--						<div class="chart-header">-->
+<!--							Статистика-->
+<!--						</div>-->
+<!--						<div class="chart-block">-->
+<!--							<div class="chart-buttons">-->
+<!--								<div id="chart-b-stat-msg" class="chart-button selected">По числу сообщений</div>-->
+<!--								<div id="chart-b-stat-letters" class="chart-button">По числу символов</div>-->
+<!--							</div>-->
+<!--							<div class="chart-buttons">-->
+<!--								<div id="chart-b-in" class="chart-button">Входящие</div>-->
+<!--								<div id="chart-b-out" class="chart-button">Исходящие</div>-->
+<!--								<div id="chart-b-all" class="chart-button selected">Все</div>-->
 
-								<div id="chart-b-summary" class="chart-button fl_r">В сумме</div>
-								<div id="chart-b-intense" class="chart-button fl_r selected">По периодам</div>
-							</div>
-							<div id="chart-container">
-								<canvas id="canvas-chart-foreground"></canvas>
-								<canvas id="canvas-chart"></canvas>
-								<div id="chart-tip" style="display: none">
-								</div>
-							</div>
-						</div>
+<!--								<div id="chart-b-summary" class="chart-button fl_r">В сумме</div>-->
+<!--								<div id="chart-b-intense" class="chart-button fl_r selected">По периодам</div>-->
+<!--							</div>-->
+<!--							<div id="chart-container">-->
+<!--								<canvas id="canvas-chart-foreground"></canvas>-->
+<!--								<canvas id="canvas-chart"></canvas>-->
+<!--								<div id="chart-tip" style="display: none">-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
 
-						<div id="select-user-box">
-							<div id="select-user-list" data-offset="0"></div>
-							<div class="select-user-buttons">
-								<div id="select-user-prev-b" class="select-user-b">предыдущие</div>
-								<div id="select-user-next-b" class="select-user-b">следующие</div>
-							</div>
-							<div class="select-user-reset">
-								<div id="select-user-reset-b" class="select-user-b">убрать все</div>
-							</div>
-						</div>
-					</div>
+<!--						<div id="select-user-box">-->
+<!--							<div id="select-user-list" data-offset="0"></div>-->
+<!--							<div class="select-user-buttons">-->
+<!--								<div id="select-user-prev-b" class="select-user-b">предыдущие</div>-->
+<!--								<div id="select-user-next-b" class="select-user-b">следующие</div>-->
+<!--							</div>-->
+<!--							<div class="select-user-reset">-->
+<!--								<div id="select-user-reset-b" class="select-user-b">убрать все</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
 
-					<div id="export-wrap" style="display: none">
-						<div class="chart-header">
-							Экспорт
-						</div>
+<!--					<div id="export-wrap" style="display: none">-->
+<!--						<div class="chart-header">-->
+<!--							Экспорт-->
+<!--						</div>-->
 
-						<div class="chart-block">
-							<div class="chart-buttons">
-								<div id="export-b-save-section" class="chart-button selected">Сохранить переписку</div>
-								<div id="export-b-export-section" class="chart-button">Экспорт</div>
-							</div>
-							<div id="export-buttons-2" class="chart-buttons">
-								<div id="export-b-period-all" class="chart-button selected">Все время</div>
-								<div id="export-b-year" class="chart-button">Год</div>
-								<div id="export-b-month" class="chart-button">Месяц</div>
-								<div id="export-b-week" class="chart-button">Неделя</div>
-								<div id="export-b-yesterday" class="chart-button">Вчера</div>
-								<div id="export-b-today" class="chart-button">Сегодня</div>
-								<div id="export-b-period-sel" class="chart-button">Выбрать период</div>
-								<div id="export-period-sel-container" class="chart-select-period" style="display:none">
-									<label for="export-date-from">от:</label>
-									<input class="date-input" type="text" id="export-date-from" name="from">
-									<label for="export-date-to">до:</label>
-									<input class="date-input" type="text" id="export-date-to" name="to">
-								</div>
-							</div>
+<!--						<div class="chart-block">-->
+<!--							<div class="chart-buttons">-->
+<!--								<div id="export-b-save-section" class="chart-button selected">Сохранить переписку</div>-->
+<!--								<div id="export-b-export-section" class="chart-button">Экспорт</div>-->
+<!--							</div>-->
+<!--							<div id="export-buttons-2" class="chart-buttons">-->
+<!--								<div id="export-b-period-all" class="chart-button selected">Все время</div>-->
+<!--								<div id="export-b-year" class="chart-button">Год</div>-->
+<!--								<div id="export-b-month" class="chart-button">Месяц</div>-->
+<!--								<div id="export-b-week" class="chart-button">Неделя</div>-->
+<!--								<div id="export-b-yesterday" class="chart-button">Вчера</div>-->
+<!--								<div id="export-b-today" class="chart-button">Сегодня</div>-->
+<!--								<div id="export-b-period-sel" class="chart-button">Выбрать период</div>-->
+<!--								<div id="export-period-sel-container" class="chart-select-period" style="display:none">-->
+<!--									<label for="export-date-from">от:</label>-->
+<!--									<input class="date-input" type="text" id="export-date-from" name="from">-->
+<!--									<label for="export-date-to">до:</label>-->
+<!--									<input class="date-input" type="text" id="export-date-to" name="to">-->
+<!--								</div>-->
+<!--							</div>-->
 
-							<div id="export-spinner" class="spinner">
-								<div class="bounce1"></div>
-								<div class="bounce2"></div>
-								<div class="bounce3"></div>
-							</div>
+<!--							<div id="export-spinner" class="spinner">-->
+<!--								<div class="bounce1"></div>-->
+<!--								<div class="bounce2"></div>-->
+<!--								<div class="bounce3"></div>-->
+<!--							</div>-->
 
-							<!-- <table id="table-top" class="table-top">
-								<thead>
-									<tr>
-										<th class="row-num">#</th>
-										<th class="row-user">Пользователь</th>
-										<th id="table-msg-label" class="row-msg">Всего <span class="counting-type">сообщений</span></th>
-										<th id="table-msg-out-label" class="row-msg-in">Отправлено <span class="counting-type">сообщений</span></th>
-										<th id="table-msg-in-label" class="row-msg-out">Получено <span class="counting-type">сообщений</span></th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table> -->
+<!--							&lt;!&ndash; <table id="table-top" class="table-top">-->
+<!--								<thead>-->
+<!--									<tr>-->
+<!--										<th class="row-num">#</th>-->
+<!--										<th class="row-user">Пользователь</th>-->
+<!--										<th id="table-msg-label" class="row-msg">Всего <span class="counting-type">сообщений</span></th>-->
+<!--										<th id="table-msg-out-label" class="row-msg-in">Отправлено <span class="counting-type">сообщений</span></th>-->
+<!--										<th id="table-msg-in-label" class="row-msg-out">Получено <span class="counting-type">сообщений</span></th>-->
+<!--									</tr>-->
+<!--								</thead>-->
+<!--								<tbody>-->
+<!--								</tbody>-->
+<!--							</table> &ndash;&gt;-->
 
-						</div>
+<!--						</div>-->
 
-					</div>
+<!--					</div>-->
 
-					<!-- <div id="top-chart-wrap">
-						<div class="chart-header">
-							ТОП 10
-						</div>
+<!--					&lt;!&ndash; <div id="top-chart-wrap">-->
+<!--						<div class="chart-header">-->
+<!--							ТОП 10-->
+<!--						</div>-->
 
-						<div class="chart-block">
-							<div id="chart-description">
-								% от общего числа сообщений
-							</div>
-							<div id="canvas-top-container">
-								<canvas id="canvas-top"></canvas>
-								<div id="chart-top-tip" style="display: none">
-								</div>
-							</div>
-						</div>
-					</div> -->
+<!--						<div class="chart-block">-->
+<!--							<div id="chart-description">-->
+<!--								% от общего числа сообщений-->
+<!--							</div>-->
+<!--							<div id="canvas-top-container">-->
+<!--								<canvas id="canvas-top"></canvas>-->
+<!--								<div id="chart-top-tip" style="display: none">-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div> &ndash;&gt;-->
 
-				</div>
-			</div>
+<!--				</div>-->
+<!--			</div>-->
 
-		</div>
+<!--		</div>-->
 
 		<div id="top-right-block" style="display: block">
 			<div class="wrap">

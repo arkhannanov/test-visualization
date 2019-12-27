@@ -29,6 +29,7 @@ var app = {
     //methods
     init: function() {
     	debugLog('init application');
+        console.log("Работает");
         _gaq.push(['_trackEvent', 'version', ABOUT.version]);
         //init profiler
         app.profiler = {};

@@ -324,9 +324,12 @@ dataManager = new function() {
             }
             else {
                 debugLog('msg data loaded from database successfully');
+
                 dm.msgData = msgData;
                 dm.msgLastId = msgData.mids[msgData.mids.length - 1];
                 dm.isMsgDataLoaded = true;
+                console.log(dm);
+
                 callback();
             }
         }, function() {
